@@ -57,7 +57,7 @@ public class Main {
         //exercise 2
         int yearDevice = 2020;
         int osDevice = 0;
-        // IOS - 0; Android - 1
+        // IOS - 0; Android - 1;
         getClientOS(yearDevice, osDevice);
 
         //exercise 3
