@@ -2,19 +2,18 @@ public class Main {
 
     //Exercise 1
 
-    public static int printLeapYears(int howYear) {
+    public static void printLeapYears(int howYear) {
         int years = howYear;
         if (years % 4 == 0 || years % 100 == 0 || years % 400 == 0) {
             System.out.println(years + " год является високосным");
         } else {
             System.out.println(years + " год не является високосным");
         }
-        return years;
     }
 
     //Exercise 2
 
-    public static int getClientOS(int yearDevice, int osDevice) {
+    public static void getClientOS(int yearDevice, int osDevice) {
         int clientDeviceYear = yearDevice;
         int clientOS = osDevice;
         if (clientOS == 0 && clientDeviceYear >= 2015) {
@@ -26,7 +25,6 @@ public class Main {
         } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите lite версию приложения для Android по ссылке");
         }
-        return clientOS;
     }
 
     //Exercise 3
@@ -37,11 +35,11 @@ public class Main {
         int twoDay = two;
         int threeDay = three;
         if (deliveryDistance > 1 && deliveryDistance <= 20){
-            System.out.println("Потребуется дней: " + day);
+            return day;
         } else if(deliveryDistance > 20 && deliveryDistance <= 60){
-            System.out.println("Потребуется дней: " + twoDay);
+            return twoDay;
         } else if (deliveryDistance > 60 && deliveryDistance <= 100){
-            System.out.println("Потребуется дней: " + threeDay);
+            return threeDay;
         }
         return deliveryDistance;
     }
@@ -61,12 +59,15 @@ public class Main {
         getClientOS(yearDevice, osDevice);
 
         //exercise 3
-        int distance = 95;
+        int distance = 45;
         int one = 1;
         int two = one + 1;
         int three = two + 1;
         deliveryDay(distance, one, two, three);
+        int dayForDelivery = deliveryDay(distance, one, two, three);
+        System.out.println(dayForDelivery);
     }
+
 }
 
 
